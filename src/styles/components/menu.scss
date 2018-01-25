@@ -1,0 +1,110 @@
+.menu {
+    display: flex;
+}
+
+.menu__link {
+    text-decoration: none;
+    @include roboto(500);
+    color: $white;
+    transition: all 0.5s;
+}
+
+
+.menu--footer {
+    .menu__list {
+        display: flex;
+
+        @include tablets {
+            margin-top: 10px;
+        }
+    }
+    
+    .menu__item {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+            
+        }
+
+        @include phones {
+            margin-right: 10px;
+        }
+    }
+
+    .menu__link:hover {
+        color: $marine;
+
+    }
+
+    .menu__link {
+        @include phones {
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+    }
+
+
+}
+ 
+    
+
+
+.menu--intro {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+
+    & .menu__list {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    & .menu__item {
+        border-right: 2px solid #73cac2;
+        padding: 10px;
+        flex-grow: 1;
+        text-align: center;
+        @extend %btn;
+        border-radius: 0;
+        background-color: rgba(0,191,165,0.85);
+        
+        &:last-child {
+            border-right: 0 solid transparent;
+            
+        }
+
+        @include tablets {
+            font-size: 15px;
+        }
+        
+        @include phones {
+            border: 1px solid #73cac2;
+            
+        }
+    
+    }
+
+    & .menu__link {
+        //@extend %btn;
+        //border-radius: 0;
+        //border: 0px solid transparent;
+        //background-color: rgba(0,191,165,0.85);
+        //height: 100%;
+        //width: 100%;
+        //padding: 10px 10px;
+        //text-align: center;
+
+        /*@include tablets {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }*/
+
+    }
+}
+    

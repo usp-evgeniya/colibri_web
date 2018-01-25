@@ -1,0 +1,36 @@
+.map {
+    grid-area: map;
+    width: 100%;
+    height: 975px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+  @include desktop-large {
+    height: 100%;
+  }
+
+  @include tablets {
+    height: 100%;
+  }
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+a[href^="http://maps.google.com/maps"]{
+  display:none !important
+}
+a[href^="https://maps.google.com/maps"]{
+  display:none !important
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}

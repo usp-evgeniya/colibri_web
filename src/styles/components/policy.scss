@@ -1,0 +1,22 @@
+.policy {
+    grid-area: policy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 170px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include tablets {
+        margin-bottom: 230px;
+    }
+}
+
+.policy__text {
+    width: 70%;
+    text-align: justify;
+
+    @include tablets {
+        width: 90%;
+    }
+}

@@ -1,0 +1,190 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../img/bg/bg_comments.jpg') 50% 50% no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 150px;
+    position: relative;
+
+    @include desktop-large {
+        background-position-y: 65%;
+    }
+
+    @include tablets {
+        padding-bottom: 234px;
+    }
+
+    @include phones {
+        padding-bottom: 264px;
+    }
+
+}
+
+.comments__list {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    width: 80%;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+    
+    @include tablets {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+    @include phones {
+        flex-direction: column;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+}
+
+.comments__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 380px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    margin: 15px;
+
+
+    @include tablets {
+        width: 320px;
+    }
+
+    @include phones {
+        width: 100%;
+        padding: 20px;
+        
+        &:last-child {
+        }
+    }
+
+}
+
+.comments__photo {
+    @include circle(80px,$white);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    @include phones {
+        @include circle(55px,$white);
+    }
+}
+
+.comments__img {
+    max-width: 100%;
+}
+
+
+.comments__text {
+    line-height: 26px;
+
+    & p:last-child {
+        margin-bottom: 20px;
+        
+
+        @include tablets {
+            margin-bottom: 10px;
+        }
+
+        @include phones {
+            margin-bottom: 5px;
+
+        }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        height: 29px;
+        width: 33px;
+        background: url('../img/quote.png') 50% 50% no-repeat;
+        opacity: 0.2;
+        margin-bottom: 25px;
+
+        @include tablets {
+            margin-bottom: 15px;
+
+        }
+
+        @include phones {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include tablets {
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
+}
+
+.comments__description {
+    display: flex;
+    align-items: center;
+}
+
+.comments__person {
+    color: $marine;
+    max-width: 200px;
+
+    &--name {
+        @include roboto(600);
+        color: $marine;
+        text-decoration: none;
+    }
+
+    &--occupation {
+        @include roboto(400);
+
+    }
+
+    @include tablets {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 160px;
+
+    }
+
+  
+}
+
+.comments__btn-arrow {
+    margin-bottom: 70px;
+    border: 1px solid transparent;
+    background-color: transparent;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 30px;
+
+    }
+}
+
+.comments__arrow-up {
+    fill: $white;
+    opacity: 0.7;
+    width: 26px;
+    height: 17px;
+    transition: opacity 0.5s;
+    cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+}
