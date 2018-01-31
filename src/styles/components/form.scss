@@ -301,7 +301,9 @@
 
     @include tablets {
         width: 348px;
+        margin-bottom: 60px;
     }
+
     @include phones {
         width: 95%;
         margin-bottom: 30px;

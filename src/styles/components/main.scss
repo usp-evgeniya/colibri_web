@@ -1,18 +1,23 @@
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .main--intro {
     width: 100%;
     height: 100%;
-    min-height: 550px;
+    min-height: 580px;
     background: url('../img/bg/bg_welcome.jpg') 50% 0% no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
+    //display: flex;
+    //justify-content: center;
     align-items: center;
-    flex-direction: column;
+    //flex-direction: column;
     position: relative;
     perspective: 1000;
-
+    overflow: hidden;
 }
 
 .main__flipper {
@@ -20,7 +25,8 @@
     transform-style: preserve-3d;
     position: relative;
     width: 380px;
-    height: 405px;
+    height: 450px;
+    //z-index: 100;
 
     
     @include tablets {
@@ -29,21 +35,33 @@
 
     @include phones {
         width: 300px;
-        height: 455px;
+        height: 470px;
     }
+
 
 }
 
 .active {
-    .main__flipper {
+    /*.main__flipper {
         transform: rotateY(180deg);
+    }*/
+
+    .intro {
+        z-index: 100;
+        transform: rotateY(180deg);
+    }
+
+    .auth {
+        z-index: 200;
+        transform: rotateY(360deg);
     }
 
 }
 
 
+
 .main--about {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 603px 50% 50%;
     grid-template-areas: 
@@ -61,12 +79,12 @@
 
     @include phones {
         grid-template-rows: 98vh 100% 925px;
-    }
+    }*/
 }
 
 
 .main--blog {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 34% 66%;
     grid-template-rows: 396px 100%;
     grid-template-areas: 
@@ -91,12 +109,12 @@
     @include phones {
         grid-template-rows: 98vh 100% 100%;
         margin-bottom: 264px;
-    }
+    }*/
 }
 
 
 .main--works {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 603px 45% 55%;
     grid-template-areas: 
@@ -110,12 +128,12 @@
 
     @include phones {
         grid-template-rows: 98vh 100% 1fr;
-    }
+    }*/
 
 }
 
 .main--policy {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 603px 1fr;
     grid-template-areas: 
@@ -128,6 +146,6 @@
 
     @include phones {
         grid-template-rows: 98vh 1fr;
-    }
+    }*/
 
 }

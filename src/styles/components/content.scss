@@ -1,4 +1,7 @@
-.content--about {
+.content {
+    display: flex;
+    width: 100%;
+    /*
     grid-area: content;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -11,5 +14,25 @@
         grid-template-areas:
         "about"
         "skills";
+    }*/
+
+    
+    @include tablets {
+        flex-direction: column;
     }
+
+    &--blog {
+        margin-bottom: 170px;
+        
+        @include tablets {
+            margin-bottom: 234px;
+        }
+
+        @include phones {
+            margin-bottom: 275px;
+        }
+
+    }
+
+
 }

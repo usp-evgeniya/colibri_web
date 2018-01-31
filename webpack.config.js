@@ -6,10 +6,10 @@ const config = {
         filename: 'main.min.js'
     },
     plugins: [
-        new uglifyJS({
+        /*new uglifyJS({
             sourceMap: true
 
-        })
+        })*/
     ]
 
 };

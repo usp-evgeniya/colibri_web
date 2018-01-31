@@ -1,8 +1,13 @@
 .about {
-    grid-area: about;
+    //grid-area: about;
+    width: 50%;
     background-color: #efeee9;
     display: flex;
     justify-content: center;
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .about__content {
@@ -44,8 +49,7 @@
 }
 
 .about__img {
-    max-width: 100%;
-    
+    width: 100%;
 
 }
 
@@ -70,6 +74,7 @@
 
 .about__text {
     margin-bottom: 20px;
+    width: 100%;
 
     @include tablets {
         margin-bottom: 30px;

@@ -42,38 +42,41 @@ module.exports = function(){
                 $(window).on('scroll', function () {
                     var scrollTop = $(window).scrollTop();
                     var article = defineArticle(articles);
+                    var blogSidebar = $('.js-blog-sidebar');
+                    var footerHeight = $('.js-footer').innerHeight();
                     var fixedPosition = $('.js-section-articles').offset().top;
                     var contentHeight = $('.js-section-articles').innerHeight();
-                    var sidebarHeight = $('.js-blog-sidebar').height();
+                    var sidebarHeight = $('.js-blog-sidebar').height() + footerHeight;
                     var sidebarBottomPos = contentHeight + fixedPosition - scrollTop;
+                   
 
                     if (scrollTop >= fixedPosition) {
-                        $('.js-blog-sidebar').addClass('fixed');
+                        blogSidebar.addClass('fixed');
+                                                
+                        if (sidebarHeight >= sidebarBottomPos) {
+                            blogSidebar.removeClass('fixed');
+                            blogSidebar.addClass('bottom');
+                        } else {
+                            blogSidebar.removeClass('bottom');
+                            blogSidebar.addClass('fixed');
+                        }
                     } else {
-                        $('.js-blog-sidebar').removeClass('fixed');
-                    }
-
-                    if (sidebarHeight >= sidebarBottomPos) {
-                        $('.js-blog-sidebar').addClass('bottom');
-                    } else {
-                        $('.js-blog-sidebar').removeClass('bottom');
+                        blogSidebar.removeClass('fixed');
                     }
                     
-                    if (article.nextArticle.length) {
-                        if (checkDistance(scrollTop, article.nextArticle)) {
-                            newEq = article.nextArticle.index();
-                            activeAdd(newEq);
+                    var articleCheck;
+                    var changeArticle = function(articleCheck) {
+                        if (articleCheck.length) {
+                            if (checkDistance(scrollTop, articleCheck)) {
+                                newEq = articleCheck.index();
+                                activeAdd(newEq);
+                            }
                         }
-    
-                    }
+                    };
 
-                    if (article.prevArticle.length) {
-                        if (checkDistance(scrollTop, article.prevArticle)) {
-                            newEq = article.prevArticle.index();
-                            activeAdd(newEq);
-                        }
-    
-                    }
+                    changeArticle(article.nextArticle);
+                    changeArticle(article.prevArticle);
+
                 });
 
                 titles.on('click', function(e) {

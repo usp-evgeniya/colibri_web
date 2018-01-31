@@ -15,6 +15,7 @@ const articlesAnimate = require('./modules/articles');
 const adminTabs = require('./modules/admin');
 const closeMessage = require('./modules/close');
 const formSubmit = require('./modules/form');
+const svgInit = require('./modules/svg4everybody');
 
 if (document.images.length > 0) {
     preloaderInit();
@@ -27,10 +28,6 @@ if (document.images.length > 0) {
 if (document.getElementsByClassName('js-hamburger').length > 0) {
     hamburgerInit();
 }
-
-/*if (document.getElementsByClassName('map').length > 0) {
-    googleMap();
-}*/
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
@@ -71,4 +68,7 @@ if (document.getElementsByClassName('js-contact-status').length > 0) {
 if (document.getElementsByClassName('js-form').length > 0) {
     formSubmit();
 }
+
+svgInit();
+svg4everybody();
 

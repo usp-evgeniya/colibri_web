@@ -1,15 +1,50 @@
-.blog__sidebar {
-    grid-area: sidebar;
+.blog__sidebar-wrapper {
+    width: 34%;
+    //grid-area: sidebar;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 
     @include tablets {
         display: none;
     }
+
+    @include desktop-large {
+        width: 26.5%;
+
+    }
+}
+
+.blog__sidebar {
+    width: 100%;
+    padding: 70px 70px 70px 0;
+    
+    @include desktop-large {
+        padding: 70px 100px 70px 0;
+
+    }
+
+    
+    //transition: all 0.5s;
+    //width: 34%;
+    //grid-area: sidebar;
+    /*display: flex;
+    justify-content: flex-end;*/
+/*
+    @include tablets {
+        display: none;
+    }
+
+    @include desktop-large {
+        width: 26.5%;
+
+    }*/
 }
 
 .blog__sidebar.fixed {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 34%;
 
     @include desktop-large {
@@ -20,22 +55,24 @@
 
 .blog__sidebar.bottom {
     position: absolute;
-    bottom: 170px;
+    //position: fixed;
+    bottom: 0;
+    left: 0;
     top: auto;
-    width: 34%;
+    //width: 34%;
 
     @include desktop-large {
-        width: 26.5%;
+        //width: 26.5%;
 
     }
 
 }
 
 .blog__list {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    margin-right: 100px;
-    width: 75%
+    //margin-top: 70px;
+    //margin-bottom: 70px;
+    //margin-right: 100px;
+    //width: 75%
 }
 
 .blog__item {

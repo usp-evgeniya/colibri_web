@@ -17,6 +17,12 @@
         @include tablets {
             margin-top: 10px;
         }
+
+        @include phones {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
     }
     
     .menu__item {

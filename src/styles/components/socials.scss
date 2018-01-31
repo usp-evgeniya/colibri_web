@@ -36,6 +36,14 @@
     .socials__icon {
         fill: $marine;
     }
+
+    .socials__list {
+        margin-bottom: 0;
+
+        @include phones {
+            margin-top: 20px;
+        }
+    }
 }
 
 .socials--header {

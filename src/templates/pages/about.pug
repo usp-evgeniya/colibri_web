@@ -10,10 +10,11 @@ block content
     .wrapper
         include ../common/header.pug
         main.main.main--about
-            include ../common/hero.pug
-            svg.triangles.triangles--about(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="none")
-                polygon.triangle__left(points="0,0 0,108 601,108 601,105")
-                polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
+            .section.hero
+                include ../common/hero.pug
+                svg.triangles.triangles--about(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="xMinYMax")
+                    polygon.triangle__left(points="0,0 0,108 601,108 601,105")
+                    polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
             section.section.content.content--about
                 .about.js-about
                     .about__content
