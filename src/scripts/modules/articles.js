@@ -48,7 +48,6 @@ module.exports = function(){
                     var contentHeight = $('.js-section-articles').innerHeight();
                     var sidebarHeight = $('.js-blog-sidebar').height() + footerHeight;
                     var sidebarBottomPos = contentHeight + fixedPosition - scrollTop;
-                   
 
                     if (scrollTop >= fixedPosition) {
                         blogSidebar.addClass('fixed');

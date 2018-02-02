@@ -5,7 +5,6 @@
     align-items: center;
 
     &--works {
-        //grid-area: title;
         width: 100%;
         background-color: #faf8f0;
         padding: 50px 0;
@@ -83,7 +82,6 @@
 
         @include tablets {
             width: 472px;
-            //margin-top: 32px;
             margin-bottom: 32px;
 
         }

@@ -1,6 +1,5 @@
 .blog__sidebar-wrapper {
     width: 34%;
-    //grid-area: sidebar;
     display: flex;
     justify-content: flex-end;
     position: relative;
@@ -23,27 +22,12 @@
         padding: 70px 100px 70px 0;
 
     }
-
     
-    //transition: all 0.5s;
-    //width: 34%;
-    //grid-area: sidebar;
-    /*display: flex;
-    justify-content: flex-end;*/
-/*
-    @include tablets {
-        display: none;
-    }
-
-    @include desktop-large {
-        width: 26.5%;
-
-    }*/
 }
 
 .blog__sidebar.fixed {
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 34%;
 
@@ -55,25 +39,13 @@
 
 .blog__sidebar.bottom {
     position: absolute;
-    //position: fixed;
     bottom: 0;
     left: 0;
     top: auto;
-    //width: 34%;
 
-    @include desktop-large {
-        //width: 26.5%;
-
-    }
 
 }
 
-.blog__list {
-    //margin-top: 70px;
-    //margin-bottom: 70px;
-    //margin-right: 100px;
-    //width: 75%
-}
 
 .blog__item {
     padding: 20px;

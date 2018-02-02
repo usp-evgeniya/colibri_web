@@ -5,10 +5,8 @@
     left: 0;
     right: 0;
     width: 100%;
-    //grid-area: hero;
     z-index: 50;
     margin-bottom: -3px;
-    //align-self: end;
     fill: $white;
 
     @include tablets {
@@ -36,7 +34,6 @@
 }
 
 .triangles--blog {
-    //grid-area: heroBlog;
     
     .triangle__left {
         fill: $white;
@@ -48,7 +45,6 @@
 }
 
 .triangles--works {
-    //grid-area: hero;
     
     .triangle__left {
         fill: #faf8f0;
@@ -57,8 +53,4 @@
     .triangle__right {
         fill: #faf8f0;
     }
-}
-
-.triangles--policy {
-    //grid-area: hero;
 }

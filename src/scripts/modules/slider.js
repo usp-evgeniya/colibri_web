@@ -18,7 +18,7 @@ module.exports = function() {
         }, {
             subtitle: "Вёрстка и программирование сайта-портфолио веб-разработчика",
             techs: "Адаптивный сайт, parallax-эффекты, стильный слайдер, форма обратной связи, страница авторизации, интерактивная кастомизированная карта. Технологии: HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
-            link: "https://usp-evgeniya.github.io/portfolio/dist/",
+            link: "http://www.colibri-web.ru/",
             img: "img/content/works/portfolio.png",
         }, {
             subtitle: "Дизайн интернет-магазина лабораторного оборудования",

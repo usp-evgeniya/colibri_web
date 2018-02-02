@@ -1,13 +1,5 @@
 module.exports = function () {
  
-/*
-    window.onload = function() {
-        var preloader = document.getElementById('js-preloader');
-        if (!preloader.classList.contains('done')) {
-            preloader.classList.add('done');
-        } 
-    }*/
-
     (function () {
         function id(v) { return document.getElementById(v); }
         function loadBar() {
