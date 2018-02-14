@@ -25,6 +25,10 @@ if (document.images.length > 0) {
 	document.body.style.overflow = 'auto';
 }
 
+if (document.getElementsByClassName('js-btn-auth').length > 0) {
+    welcome();
+}
+
 if (document.getElementsByClassName('js-hamburger').length > 0) {
     hamburgerInit();
 }

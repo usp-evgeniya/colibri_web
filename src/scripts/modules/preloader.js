@@ -8,13 +8,17 @@ module.exports = function () {
                 images = document.images,
                 imagesLoadedCount = 0,
                 imagesTotalCount = images.length;
-            if (imagesTotalCount === 0) return doneLoading();
+            if (imagesTotalCount === 0) {
+                doneLoading();
+            }
 
             function imageLoaded() {
                 imagesLoadedCount += 1;
                 var percentage = Math.ceil(100 / imagesTotalCount * imagesLoadedCount);
                 progress.innerHTML = percentage;
-                if( imagesLoadedCount === imagesTotalCount) return doneLoading();
+                if( imagesLoadedCount === imagesTotalCount) {
+                    doneLoading();
+                }
             }
 
             function doneLoading() {

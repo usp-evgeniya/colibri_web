@@ -62,12 +62,11 @@ module.exports = function(){
                     } else {
                         blogSidebar.removeClass('fixed');
                     }
-                    
-                    var articleCheck;
+
                     var changeArticle = function(articleCheck) {
                         if (articleCheck.length) {
                             if (checkDistance(scrollTop, articleCheck)) {
-                                newEq = articleCheck.index();
+                                var newEq = articleCheck.index();
                                 activeAdd(newEq);
                             }
                         }

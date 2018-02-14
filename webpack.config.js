@@ -3,14 +3,15 @@ uglifyJS = require('uglifyjs-webpack-plugin');
 
 const config = {
     output: {
-        filename: 'main.min.js'
+        //filename: 'main.min.js'
+        filename: 'main.js'
     },
-    plugins: [
-        /*new uglifyJS({
+    /*plugins: [
+        new uglifyJS({
             sourceMap: true
 
-        })*/
-    ]
+        })
+    ]*/
 
 };
 

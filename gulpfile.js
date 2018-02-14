@@ -5,7 +5,7 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    postcss = require('gulp-postcss')
+    postcss = require('gulp-postcss'),
     pxtorem = require('postcss-pxtorem'),
     //scripts
     uglify = require('gulp-uglify'),
@@ -14,8 +14,10 @@ const gulp = require('gulp'),
     gulpWebpack = require('gulp-webpack'),
     webpackConfig = require('./webpack.config.js'),
     jshint = require('gulp-jshint'),
+    jshintStylish = require('jshint-stylish'),
     lintConfig = require('./lint.config.js'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    gutil = require('gulp-util'),
     //templates
     pug = require('gulp-pug'),
     //build
@@ -84,9 +86,14 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src)
     .pipe(jshint(lintConfig))    
-    .pipe(jshint.reporter('default')) 
-    .pipe(babel({presets: ['env']}))
+    .pipe(jshint.reporter(jshintStylish)) 
     .pipe(gulpWebpack(webpackConfig, webpack))
+    .pipe(babel({presets: ['env']}))
+    .pipe(rename({suffix:'.min'}))
+    .pipe(sourcemaps.init({loadMaps:true}))
+        .pipe(uglify())
+        .on('error', gutil.log)
+        .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scripts.dest));
 }
 

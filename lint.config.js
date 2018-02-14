@@ -7,7 +7,12 @@ const lintConfig = {
     "devel": true,
     "undef": false,
     "unused": true,
-    "unused": true,
+    "esversion": 6,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "maxparams": 3,
+    "node": true,
     "globals": {
       "$": true,
     }
