@@ -1,8 +1,14 @@
 .articles {
-    grid-area: articles;
     display: flex;
+    width: 66%;
+
+    @include desktop-large {
+        width: 73.5%;
+
+    }
 
     @include tablets {
+        width: 100%;
         padding-left: 24px;
         padding-right: 24px;
     }

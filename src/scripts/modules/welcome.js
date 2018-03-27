@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-module.exports = $(function(){
+module.exports = function() {
     $('.js-btn-auth').on('click',function (e) {
         e.preventDefault();
         var elem = $(e.target),
@@ -16,4 +16,4 @@ module.exports = $(function(){
 
         mainIntro.removeClass('active');
     });
-});
+};

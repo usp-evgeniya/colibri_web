@@ -12,8 +12,8 @@ module.exports = function () {
                 divider = index / 100,
                 positionX = initialX * divider,
                 positionY = initialY * divider,
-                transform2D = 'translate(' + positionX + 'px,' + positionY + 'px)',
-                image = layer.firstElementChild;
+                transform2D = 'translate(' + positionX + 'px,' + positionY + 'px)';
+                //image = layer.firstElementChild;
 
             layer.style.transform = transform2D;
         });

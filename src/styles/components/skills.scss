@@ -1,8 +1,13 @@
 .skills {
-    grid-area: skills;
+    //grid-area: skills;
+    width: 50%;
     background-color: #eeebdf;
     display: flex;
     justify-content: center;
+    
+    @include tablets {
+        width: 100%;
+    }
 }
 
 
@@ -43,6 +48,7 @@
 
 .skills__text {
     margin-bottom: 25px;
+    width: 100%;
 
     @include tablets {
         width: 70%;

@@ -1,56 +1,40 @@
 .works {
-    grid-area: works;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 188px 755px;
-    grid-template-areas: 
-    "title"
-    "worksList";
-
-    @include tablets {
-        grid-template-rows: 134px 100%;
-    }
-
-    @include phones {
-        grid-template-rows: 83px 100vh;
-    }
+    display: flex;
+    flex-direction: column;
 }
 
 .works__list {
-    grid-area: worksList;
+    /*grid-area: worksList;*/
 }
 
 .works__item {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 67% 33%;
-    grid-template-areas: 
-    "description preview"
-    "description btns";
+    display: flex;
 
     @include tablets {
-        height: 1014px;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 20%;
-        grid-template-areas: 
-        "preview"
-        "description"
-        "btns";
+        flex-direction: column;
     }
 
-    @include phones {
-        height: 100vh;
-        grid-template-rows: 1fr 1fr 15%;
-    }
 }
 
 .works__block {
-    grid-area: description;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0efe9;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include tablets {
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include phones {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .works__description {
@@ -59,27 +43,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
+    
     @include phones {
         width: 97%;
     }
 }
 
 .works__example {
-    grid-area: preview;
-    width: 100%;
+    width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0efe9;
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .works__btns  {
-    grid-area: btns;
     display: flex;
     width: 100%;
+
+    @include tablets {
+        height: 200px;
+    }
+
+    @include phones {
+        height: 120px;
+    }
+    
 }
 
 .works__techs {
@@ -122,6 +115,7 @@
 }
 
 .works__photo {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +124,7 @@
 
     @include tablets {
         height: 100%;
+        padding: 30px 0;
     }
 }
 
@@ -189,22 +184,22 @@
         height: 100%;
     }
 
+    &:hover .works__btn-icon {
+        opacity: 1;
+    }
+
 }
 
 .works__btn-icon {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(90deg);
     width: 43px;
     height: 27px;
     fill: $white;
     z-index: 100;
     opacity: 0.7;
     transition: opacity 0.5s;
-    
-        &:hover {
-            opacity: 1;
-        }
 
 }

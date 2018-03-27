@@ -21,7 +21,7 @@ module.exports = function(){
                         var items = $('.js-circle'),
                             counter = 0;
 
-                        function each() {
+                        var each = function () {
                             var item = items.eq(counter),
                                 circleColored = item.find('.js-circle__second'),
                                 percent = circleColored.attr('data-circle'),
@@ -32,7 +32,7 @@ module.exports = function(){
                                 counter++;
 
                                 setTimeout(each, 20);
-                        }
+                        };
 
                         each();
 

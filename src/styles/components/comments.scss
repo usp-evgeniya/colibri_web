@@ -18,7 +18,7 @@
     }
 
     @include phones {
-        padding-bottom: 264px;
+        padding-bottom: 275px;
     }
 
 }
@@ -27,13 +27,13 @@
     display: flex;
     justify-content: center;
     align-items: space-between;
-    width: 80%;
+    width: 82%;
     margin-bottom: 55px;
     flex-wrap: wrap;
     
     @include tablets {
         width: 95%;
-        margin-bottom: 15px;
+        margin-bottom: 45px;
     }
 
     @include phones {
@@ -82,12 +82,13 @@
 }
 
 .comments__img {
-    max-width: 100%;
+    width: 100%;
 }
 
 
 .comments__text {
     line-height: 26px;
+    width: 100%;
 
     & p:last-child {
         margin-bottom: 20px;
@@ -165,6 +166,7 @@
     margin-bottom: 70px;
     border: 1px solid transparent;
     background-color: transparent;
+    cursor: pointer;
 
     @include tablets {
         margin-bottom: 50px;
@@ -174,6 +176,10 @@
         margin-bottom: 30px;
 
     }
+
+    &:hover .comments__arrow-up {
+        opacity: 1;
+    }
 }
 
 .comments__arrow-up {
@@ -182,9 +188,5 @@
     width: 26px;
     height: 17px;
     transition: opacity 0.5s;
-    cursor: pointer;
-
-        &:hover {
-            opacity: 1;
-        }
+    
 }

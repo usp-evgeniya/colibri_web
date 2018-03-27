@@ -1,77 +1,44 @@
 module.exports = function () {
-    
-    /*document.body.onload = function () {
+ 
+    (function () {
+        function id(v) { return document.getElementById(v); }
+        function loadBar() {
+            var progress = id("js-load-percent"),
+                preloader = id("js-preloader"),
+                images = document.images,
+                imagesLoadedCount = 0,
+                imagesTotalCount = images.length;
+            if (imagesTotalCount === 0) {
+                doneLoading();
+            }
 
-        setTimeout(function() {
-            var preloader = document.getElementById('js-preloader');
-            if (!preloader.classList.contains('done')) {
-                preloader.classList.add('done');
-            }           
+            function imageLoaded() {
+                imagesLoadedCount += 1;
+                var percentage = Math.ceil(100 / imagesTotalCount * imagesLoadedCount);
+                progress.innerHTML = percentage;
+                if( imagesLoadedCount === imagesTotalCount) {
+                    doneLoading();
+                }
+            }
 
-        },500)
-
-
-    };*/
-
-    var images = document.images,
-        imagesTotalCount = images.length,
-        imagesLoadedCount = 0,
-        persDisplay = document.getElementById('js-load-percent'),
-        preloader = document.getElementById('js-preloader');
-    
-    for ( var i =0; i < imagesTotalCount; i++) {
-        imageClone = new Image();
-        imageClone.onload = imageLoaded;
-        imageClone.onerror = imageLoaded;
-        imageClone.src = images[i].src;
-    }
-
-    function imageLoaded() {
-        document.body.style.overflow = 'hidden';
-        imagesLoadedCount++;
-        persDisplay.innerHTML = Math.ceil((100 / imagesTotalCount) * imagesLoadedCount);
-    
-        if (imagesLoadedCount >= imagesTotalCount) {
-
-            setTimeout(function() {
-                if (!preloader.classList.contains('done')) {
-                    preloader.classList.add('done');
-                    document.body.style.overflow = 'auto';
-                }          
-    
-            }, 1000);
-        }
-    }
-
-    /*
-
-    var loadContent = function () {
-        console.log('Дом загружен');
-
-        function load(elem) {
-            return new Promise((resolve,reject) => {
-                elem.addEventListener('load', resolve);
-            });
-        }
-
+            function doneLoading() {
                 
-        load(preloader)
-            .then(() => {
-                console.log('Прелоудер загружен');
-            })
-            .then(() => load(images))
-            .then(() => {
-                //return load(images);
-                //return imageLoaded();
-                console.log('Изображения загружены');
 
+                setTimeout(function() {
+                    if (!preloader.classList.contains('done')) {
+                        preloader.classList.add('done');
+                    }          
+                }, 1000);
+            }
 
-
-            });
-    
-    }
-
-    document.addEventListener("DOMContentLoaded", loadContent);
-*/    
+            for ( var i = 0; i < imagesTotalCount; i++) {
+                var imageClone = new Image();
+                imageClone.onload = imageLoaded;
+                imageClone.onerror = imageLoaded;
+                imageClone.src = images[i].src;
+            }   
+        }
+        document.addEventListener('DOMContentLoaded', loadBar, false);
+    }());
 
 };

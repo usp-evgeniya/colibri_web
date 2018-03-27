@@ -1,13 +1,19 @@
 
 .triangles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    grid-area: hero;
     z-index: 50;
-    margin-bottom: -2px;
-    align-self: end;
+    margin-bottom: -3px;
     fill: $white;
 
     @include tablets {
+        margin-bottom: -3px;
+    }
+
+    @include phones {
         margin-bottom: -1px;
     }
 }
@@ -28,7 +34,6 @@
 }
 
 .triangles--blog {
-    grid-area: heroBlog;
     
     .triangle__left {
         fill: $white;
@@ -40,7 +45,6 @@
 }
 
 .triangles--works {
-    grid-area: hero;
     
     .triangle__left {
         fill: #faf8f0;
@@ -49,8 +53,4 @@
     .triangle__right {
         fill: #faf8f0;
     }
-}
-
-.triangles--policy {
-    grid-area: hero;
 }

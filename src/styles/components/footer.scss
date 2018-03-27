@@ -23,7 +23,7 @@
 
     &--text {
         @include phones {
-            height: 143px;
+            height: 155px;
         }
     }
 }
@@ -48,10 +48,6 @@
     @include roboto(300);
     color: $white;
     width: 45%;
-
-    @include desktop-large {
-        width: 30%;
-    }
 
     @include tablets {
         width: 100%;

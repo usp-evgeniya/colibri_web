@@ -1,15 +1,24 @@
-.content--about {
-    grid-area: content;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas:
-    "about skills";
+.content {
+    display: flex;
+    width: 100%;
 
+    
     @include tablets {
-        grid-template-columns: 100%;
-        grid-template-areas:
-        "about"
-        "skills";
+        flex-direction: column;
     }
+
+    &--blog {
+        margin-bottom: 170px;
+        
+        @include tablets {
+            margin-bottom: 234px;
+        }
+
+        @include phones {
+            margin-bottom: 275px;
+        }
+
+    }
+
+
 }

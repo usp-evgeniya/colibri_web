@@ -17,6 +17,12 @@
         @include tablets {
             margin-top: 10px;
         }
+
+        @include phones {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
     }
     
     .menu__item {
@@ -88,23 +94,5 @@
     
     }
 
-    & .menu__link {
-        //@extend %btn;
-        //border-radius: 0;
-        //border: 0px solid transparent;
-        //background-color: rgba(0,191,165,0.85);
-        //height: 100%;
-        //width: 100%;
-        //padding: 10px 10px;
-        //text-align: center;
-
-        /*@include tablets {
-            padding-left: 0;
-            padding-right: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }*/
-
-    }
 }
     

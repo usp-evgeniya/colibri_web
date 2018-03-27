@@ -4,7 +4,7 @@ window.initMap  = function () {
     var centerPoint = {lat: 55.783745, lng: 37.595038};
     var markerPoint = {lat: 55.800155, lng: 37.5321896};
     var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 12,
     center: centerPoint,
     zoomControl: false,
     streetViewControl: false,

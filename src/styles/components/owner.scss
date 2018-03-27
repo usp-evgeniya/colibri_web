@@ -9,7 +9,6 @@
     height: 147px;
     border-radius: 50%;
     overflow: hidden;
-    margin-top: 35px;
 }
 
 .owner__img {
@@ -25,7 +24,7 @@
     text-align: center;
 
     @include phones {
-        font-size: 21px;
+        font-size: 28px;
     }
 
     &--intro {
@@ -37,21 +36,17 @@
         }
     }
 
-
 }
-
-
 
 .owner__description {
     opacity: 0.8;
     @include roboto(400);
     text-align: center;
+    max-width: 100%;
 
     @include phones {
         margin-top: 3px;
         font-size: 14px;
     }
-
-
 
 }

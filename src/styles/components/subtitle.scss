@@ -7,6 +7,7 @@
     align-items: flex-start;
     margin: 0;
     line-height: 41px;
+    max-width: 100%;
 
     @include desktop-large {
         text-align: center;
@@ -26,7 +27,7 @@
     &--about {
         margin-bottom: 30px;
         text-align: center;
-
+        
         @include tablets {
             margin-bottom: 5px;
         }

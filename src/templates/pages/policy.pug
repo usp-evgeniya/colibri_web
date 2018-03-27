@@ -9,10 +9,11 @@ block content
     .wrapper
         include ../common/header.pug
         main.main.main--policy
-            include ../common/hero.pug
-            svg.triangles.triangles--policy(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="none")
-                polygon.triangle__left(points="0,0 0,108 601,108 601,105")
-                polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
+            .section.hero
+                include ../common/hero.pug
+                svg.triangles.triangles--policy(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="xMinYMax")
+                    polygon.triangle__left(points="0,0 0,108 601,108 601,105")
+                    polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
             section.section.policy
                 h1.title.title--policy Политика конфиденциальности
                 .policy__text

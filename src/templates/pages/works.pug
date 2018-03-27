@@ -9,10 +9,11 @@ block content
     .wrapper
         include ../common/header.pug
         main.main.main--works
-            include ../common/hero.pug
-            svg.triangles.triangles--works(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="none")
-                polygon.triangle__left(points="0,0 0,108 601,108 601,105")
-                polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
+            .section.hero
+                include ../common/hero.pug
+                svg.triangles.triangles--works(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="xMinYMax")
+                    polygon.triangle__left(points="0,0 0,108 601,108 601,105")
+                    polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
             section.section.works
                 .title__wrapper.title__wrapper--works
                     h2.title.title--works Мои работы
@@ -24,22 +25,22 @@ block content
                             .works__description
                                 .subtitle.subtitle--works.js-slide-subtitle "Лендинг для магазина бургеров Mr.Burger"
                                 .works__techs.js-slide-techs "HTML5, CSS3, JavaScript&ampjQuery, Ajax, Gulp, Git"
-                                a(href="https://usp-evgeniya.github.io/burgers/").works__link.js-slide-link
+                                a(href="https://usp-evgeniya.github.io/burgers/" target="_blank").works__link.js-slide-link
                                     svg.works__link-icon
                                         use(xlink:href="img/icons/symbol/sprite.svg#link")
                                     .works__link-text Посмотреть сайт
                         .works__example
                             .works__photo
                                 img(alt="Работа" src="img/content/works/burgers.png").works__img.js-slide-img
-                        .works__btns        
-                            button(type="button").works__btn.works__btn--next.js-btn-next
-                                img(src="img/content/works/fitness.png" alt="Следующая работа").works__img.works__img--btn.js-slide-next
-                                svg.works__btn-icon
-                                    use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
-                            button(type="button").works__btn.works__btn--prev.js-btn-prev
-                                img(src="img/content/works/portfolio.png" alt="Предыдущая работа").works__img.works__img--btn.js-slide-prev
-                                svg.works__btn-icon
-                                    use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
+                            .works__btns        
+                                button(type="button").works__btn.works__btn--prev.js-btn-prev
+                                    img(src="img/content/works/fitness.png" alt="Следующая работа").works__img.works__img--btn.js-slide-prev
+                                    svg.works__btn-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
+                                button(type="button").works__btn.works__btn--next.js-btn-next
+                                    img(src="img/content/works/portfolio.png" alt="Предыдущая работа").works__img.works__img--btn.js-slide-next
+                                    svg.works__btn-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
             section.section.comments.js-blur-bg
                 .title__wrapper.title__wrapper--comments
                     h2.title.title--comments Что обо мне говорят
@@ -54,7 +55,7 @@ block content
                                 .comments__photo
                                     img(src=`${item.img}` alt=`${item.person}`).comments__img
                                 .comments__person
-                                    a(href=`${item.link}`).comments__person--name #{item.person}
+                                    a(href=`${item.link}` target="_blank").comments__person--name #{item.person}
                                     .comments__person--occupation #{item.occupation}
                 .contact-form__wrapper.js-blur-wrapper
                     .contact-form__blur.js-blur-form
